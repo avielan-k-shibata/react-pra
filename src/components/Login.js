@@ -55,6 +55,8 @@ export const Login = () => {
         </div>
         <div>
           ユーザ登録は<Link to={'/signup'}>こちら</Link>から
+      <Link to="/testapi">test</Link>
+
         </div>
       </form>
     </div>

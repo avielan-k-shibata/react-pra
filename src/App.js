@@ -35,7 +35,7 @@ function App() {
               </PrivateRoute>
             }
           />
-                    <Route element={<PublicRoute />}>
+          <Route element={<PublicRoute />}>
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
           </Route>
