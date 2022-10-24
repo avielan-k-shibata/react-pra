@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 import {User} from './User'
 import {Post} from './Post'
 // import {Ref} from './atoms/Ref'
-// import {Pdf} from './atoms/Pdf'
+import {IO} from './atoms/IO'
+import { Layout } from "../components/template/Layout"
 
 import ComponentContext from './atoms/ComponentContext'
 
@@ -22,14 +23,15 @@ export const Home = () => {
       };
 
     return (
-    <div>
-      <h1>ホームページ{user? user.email: ""}</h1>
+    <Layout>
+      <h1 className='text-[28px]'>ホームページ{user? user.email: ""}</h1>
       <button onClick={handleLogout}>ログアウト</button>
       <Link to="/testapi">test</Link>
       {/* <Pdf /> */}
       <ComponentContext />
       <User/>
       <Post />
-    </div>
+      <IO c_name="tes">3333</IO>
+    </Layout>
   );;
 };

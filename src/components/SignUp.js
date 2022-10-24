@@ -2,6 +2,8 @@ import { useRef } from 'react';
 // import { auth } from '../firebase';
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useAuthContext } from '../context/AuthContext';
+import { Layout } from "../components/template/Layout"
+
 const SignUp = () => {
     const { user } = useAuthContext();
     const emailRef = useRef(null);
@@ -12,7 +14,7 @@ const SignUp = () => {
         // createUserWithEmailAndPassword(auth, emailRef.current.value, emailPassword.current.value);
       };
     return (
-        <div>
+        <Layout>
           <h1>ユーザ登録 {user? user.email: ""}</h1>
           <form onSubmit={handleSubmit}>
             <div>
@@ -27,7 +29,7 @@ const SignUp = () => {
               <button>登録</button>
             </div>
           </form>
-        </div>
+        </Layout>
       );
   };
   

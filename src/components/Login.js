@@ -2,6 +2,7 @@ import { auth } from '../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import {Layout} from "./template/Layout"
 export const Login = () => {
     const navigate = useNavigate();
     const [error, setError] = useState('');
@@ -33,7 +34,7 @@ export const Login = () => {
 
       
     return (
-        <div>
+        <Layout>
       <h1>ログイン</h1>
       <form onSubmit={handleSubmit}>
       {error && <p style={{ color: 'red' }}>{error}</p>}
@@ -59,6 +60,6 @@ export const Login = () => {
 
         </div>
       </form>
-    </div>
+    </Layout>
     );
 };
