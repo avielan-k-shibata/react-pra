@@ -3,9 +3,12 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import {Layout} from "./template/Layout"
+// import { useForm } from 'react-hook-form';
+
 export const Login = () => {
     const navigate = useNavigate();
     const [error, setError] = useState('');
+    
     const handleSubmit = async (event) => {
         event.preventDefault();
         const { email, password } = event.target.elements;
